@@ -5,14 +5,14 @@ const BASE_URL = "https://api.themoviedb.org/3";
 
 export const searchMovies = async (query) => {
   const res = await axios.get(`${BASE_URL}/search/movie`, {
-    params: { api_key: API_KEY, query }
+    params: { api_key: API_KEY, query },
   });
-  return res.data.results;
+  return res.data.results; // ✅ return array
 };
 
 export const getMovieDetails = async (id) => {
   const res = await axios.get(`${BASE_URL}/movie/${id}`, {
-    params: { api_key: API_KEY }
+    params: { api_key: API_KEY },
   });
   return res.data;
 };

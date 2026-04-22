@@ -1,7 +1,7 @@
-const RatingStars = ({ rating, setRating }) => {
+const RatingStars = ({ rating = 0, setRating }) => {
   return (
     <div className="flex gap-1">
-      {[1,2,3,4,5].map((star) => (
+      {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
           onClick={() => setRating(star)}
@@ -15,3 +15,5 @@ const RatingStars = ({ rating, setRating }) => {
     </div>
   );
 };
+
+export default RatingStars;
